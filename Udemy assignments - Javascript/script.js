@@ -62,7 +62,7 @@ if (numNeighbours === 1) {
     console.log('No borders');
 }
 
-*/
+
 
 // Logical Operators
 const country = 'Korea';
@@ -102,3 +102,21 @@ switch (language) {
 
 // The Conditional (Ternary) Operator
 population > 33 ? console.log(`${country}'s population is above average`) : console.log(`${country}'s population is below average`);
+
+*/
+
+
+// Fundamental part 2
+// Functions
+function describeCountry(country, population, capitalCity) {
+    return (`${country} has ${population} million people and its capital city is ${capitalCity}.`);
+}
+
+const desKorea = describeCountry('Korea', 51, 'Seoul');
+const desJapan = describeCountry('Japan', 124, 'Tokyo');
+const desAustralia = describeCountry('Australia', 27, 'Sydney');
+
+console.log(desKorea, desJapan, desAustralia);
+
+
+
