@@ -103,7 +103,7 @@ switch (language) {
 // The Conditional (Ternary) Operator
 population > 33 ? console.log(`${country}'s population is above average`) : console.log(`${country}'s population is below average`);
 
-*/
+
 
 
 // Fundamental part 2
@@ -118,5 +118,48 @@ const desAustralia = describeCountry('Australia', 27, 'Sydney');
 
 console.log(desKorea, desJapan, desAustralia);
 
+*/
+
+// Function Declarations vs. Expressions
+function percentageOfWorld1(population) {
+    return (population / 7900) * 100;
+}
+
+const koreaPopulationOfWorld = percentageOfWorld1(51);
+const japanPopulationOfWorld = percentageOfWorld1(124);
+const australiaPopulationOfWorld = percentageOfWorld1(27);
+
+console.log(koreaPopulationOfWorld, japanPopulationOfWorld, australiaPopulationOfWorld);
+
+const percentageOfWorld2 = function (population) {
+    return (population / 7900) * 100;
+};
+
+const koreaPopulationOfWorld2 = percentageOfWorld2(51);
+const japanPopulationOfWorld2 = percentageOfWorld2(124);
+const australiaPopulationOfWorld2 = percentageOfWorld2(27);
+
+console.log(koreaPopulationOfWorld2, japanPopulationOfWorld2, australiaPopulationOfWorld2);
 
 
+// Arrow Functions
+const percentageOfWorld3 = population => (population / 7900) * 100;
+const koreaPopulationOfWorld3 = percentageOfWorld3(51);
+const japanPopulationOfWorld3 = percentageOfWorld3(124);
+const australiaPopulationOfWorld3 = percentageOfWorld3(27);
+console.log(koreaPopulationOfWorld3, japanPopulationOfWorld3, australiaPopulationOfWorld3);
+
+
+
+
+
+// Functions Calling Other Function
+const describePopulation = function (country, population) {
+    const percentage = percentageOfWorld1(population);
+    const description = `${country} has ${population} million people, which is about ${percentage}% of the world.`;
+    console.log(description);
+};
+
+describePopulation('Korea', 51);
+describePopulation('Japan', 124);
+describePopulation('Australia', 27);
